@@ -1,4 +1,4 @@
-import { Zap, Lock, Code2, Wifi, Rocket, Shield } from 'lucide-react';
+import { Code2, Rocket, Shield, Wifi, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -36,22 +36,43 @@ export default function Hero() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in-up animation-delay-600">
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-cyan-500/15 transition-all duration-300">
-            <Zap className="w-8 h-8 text-cyan-400 mb-3" />
-            <h3 className="text-lg font-semibold text-white mb-2">Lightning Fast</h3>
-            <p className="text-gray-400">Connected in under 1 second</p>
+          <div className="group bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-cyan-500/15 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 text-center">
+            <div className="relative inline-block mb-4">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-cyan-400 rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+              {/* Icon container */}
+              <div className="relative bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-4 rounded-full border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <Zap className="w-8 h-8 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">Lightning Fast</h3>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Connected in under 1 second</p>
           </div>
 
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-cyan-500/15 transition-all duration-300">
-            <Shield className="w-8 h-8 text-cyan-400 mb-3" />
-            <h3 className="text-lg font-semibold text-white mb-2">100% Secure</h3>
-            <p className="text-gray-400">Everything stays on your device</p>
+          <div className="group bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-cyan-500/15 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 text-center">
+            <div className="relative inline-block mb-4">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-green-400 rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+              {/* Icon container */}
+              <div className="relative bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-4 rounded-full border border-green-400/30 group-hover:border-green-400/60 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <Shield className="w-8 h-8 text-green-400 group-hover:text-green-300 transition-colors duration-300" />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">100% Secure</h3>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Everything stays on your device</p>
           </div>
 
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-cyan-500/15 transition-all duration-300">
-            <Code2 className="w-8 h-8 text-cyan-400 mb-3" />
-            <h3 className="text-lg font-semibold text-white mb-2">Open Source</h3>
-            <p className="text-gray-400">Built by student developers</p>
+          <div className="group bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-cyan-500/15 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 text-center">
+            <div className="relative inline-block mb-4">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-purple-400 rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+              {/* Icon container */}
+              <div className="relative bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-4 rounded-full border border-purple-400/30 group-hover:border-purple-400/60 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <Code2 className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">Open Source</h3>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Built by Somesh</p>
           </div>
         </div>
       </div>
