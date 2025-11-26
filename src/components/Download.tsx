@@ -1,10 +1,9 @@
 import { saveAs } from 'file-saver';
 import JSZip from 'jszip';
-import { AlertCircle, CheckCircle, Download as DownloadIcon, Github, Lock, User } from 'lucide-react';
+import { AlertCircle, CheckCircle, Download as DownloadIcon, Lock, Sparkles, User } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Download() {
-  const [showConsent, setShowConsent] = useState(false);
   const [consentGiven, setConsentGiven] = useState(false);
   const [showCustomForm, setShowCustomForm] = useState(false);
   const [registrationNumber, setRegistrationNumber] = useState('');
@@ -183,26 +182,54 @@ For issues or updates, visit: https://github.com/ei-sanu/touchlogin
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <a href="https://github.com/ei-sanu/touchlogin" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 hover:bg-cyan-500/15 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
-            <Github className="w-12 h-12 text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
-            <h3 className="text-2xl font-bold text-white mb-2">GitHub Repository</h3>
-            <p className="text-gray-400 mb-4">View source code, contribute, and stay updated</p>
-            <div className="inline-flex items-center gap-2 text-cyan-400 font-semibold group-hover:gap-3 transition-all duration-300">
-              Explore on GitHub
-              <span>→</span>
-            </div>
-          </a>
+        <div className="max-w-xl mx-auto mb-12">
+          <div className="relative group">
+            {/* Animated glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
-          <button onClick={handleDownloadClick} className="group bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 hover:bg-cyan-500/15 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 text-left">
-            <DownloadIcon className="w-12 h-12 text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
-            <h3 className="text-2xl font-bold text-white mb-2">Download Extension</h3>
-            <p className="text-gray-400 mb-4">Custom build with your credentials</p>
-            <div className="inline-flex items-center gap-2 text-cyan-400 font-semibold group-hover:gap-3 transition-all duration-300">
-              Generate & Download
-              <span>→</span>
-            </div>
-          </button>
+            {/* Main button */}
+            <button
+              onClick={handleDownloadClick}
+              className="relative w-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-xl border border-cyan-500/50 rounded-2xl p-8 hover:border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-[1.02]"
+            >
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="relative">
+                  <DownloadIcon className="w-16 h-16 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
+                  <Sparkles className="w-6 h-6 text-yellow-400 absolute -top-1 -right-1 animate-pulse" />
+                </div>
+              </div>
+
+              <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                Download Extension
+              </h3>
+              <p className="text-gray-300 mb-6 text-lg">
+                Custom build with your credentials pre-configured
+              </p>
+
+              <div className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl text-white font-bold text-lg shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-500/70 group-hover:scale-105 transition-all duration-300">
+                <DownloadIcon className="w-5 h-5" />
+                <span>Generate & Download</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+
+              <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span>Instant Setup</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <span>100% Secure</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                  <span>No Tracking</span>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
 
         {showCustomForm && (
