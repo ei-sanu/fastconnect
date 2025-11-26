@@ -175,7 +175,7 @@ For issues or updates, visit: https://github.com/ei-sanu/touchlogin
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400">FASTNET</span> Now
+            GET<span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400">FASTNET</span> NOW
           </h2>
           <p className="text-xl text-gray-300">
             Access the fastest Wi-Fi extension. Open source, transparent, and built by students.
